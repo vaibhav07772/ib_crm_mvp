@@ -26,7 +26,7 @@ Built using **Python, Streamlit, SQLite, Groq, and Gmail SMTP**, this project fo
 Watch the application workflow, including contact management, AI-assisted email drafting, approval, and CSV import.
 
 <p align="center">
-  <img src="docs/demo.gif" alt="IB Networking CRM application demo" width="100%" />
+  <img src="docs/demo.mp4" alt="IB Networking CRM application demo" width="100%" />
 </p>
 
 **Demo highlights**
