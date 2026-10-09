@@ -1,0 +1,38 @@
+# Environment variables and secrets
+
+.env
+.env.*
+!.env.example
+
+# Private Hinglish README
+
+HINGLISH_readme.md
+
+# Python cache and virtual environments
+
+**pycache**/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+.conda/
+
+# Local databases and private test data
+
+*.db
+*.sqlite
+*.sqlite3
+data/*.csv
+data/*.db
+
+# IDE and OS files
+
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Streamlit secrets
+
+.streamlit/secrets.toml
