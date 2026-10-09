@@ -1,174 +1,105 @@
 # 📈 IB Networking CRM — AI-Powered Investment Banking Outreach
 
-<p align="center">
-  <strong>A Student-Friendly CRM for Smarter Professional Networking</strong>
-  <br />
-  AI-Assisted Email Drafting • Contact Management • Human Approval • Gmail Integration
-</p>
+**A student-friendly CRM for professional networking, AI-assisted email drafting, and outreach management.**
 
-<p align="center">
-  ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
-  ![Streamlit](https://img.shields.io/badge/Streamlit-CRM-FF4B4B?logo=streamlit&logoColor=white)
-  ![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite&logoColor=white)
-  ![Groq](https://img.shields.io/badge/LLM-Groq-orange)
-  ![License](https://img.shields.io/badge/License-MIT-green.svg)
-  ![Status](https://img.shields.io/badge/Status-MVP-orange)
-</p>
-
-IB Networking CRM is a Python-based CRM application designed to help students organize professional contacts, draft personalized networking emails with AI, review and approve messages, and manage their outreach workflow from one dashboard.
-
-Built using **Python, Streamlit, SQLite, Groq, and Gmail SMTP**, this project focuses on making networking more organized while keeping users in control of outgoing communication.
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python\&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B?logo=streamlit\&logoColor=white)](https://streamlit.io/)
+[![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite\&logoColor=white)](https://www.sqlite.org/)
+[![Groq](https://img.shields.io/badge/LLM-Groq-orange)](https://groq.com/)
+[![Status](https://img.shields.io/badge/Project-MVP-orange)]()
 
 ---
 
-## 🎬 Live Project Demo
+## 🚀 Overview
 
-Watch the application workflow, including contact management, AI-assisted email drafting, approval, and CSV import.
+IB Networking CRM is a Python-based application designed to help students organize professional contacts and manage their networking outreach from one place.
 
-<p align="center">
-  <img src="docs/demo.mp4" alt="IB Networking CRM application demo" width="100%" />
-</p>
+The application brings together contact management, CSV-based contact import, AI-assisted email drafting, human review, and outreach status tracking. It uses Streamlit for the interface, SQLite for local data storage, and the Groq API for AI-generated email drafts.
 
-**Demo highlights**
+The goal is to make professional networking more organized while keeping users in control of the messages they send.
 
-* 📊 CRM dashboard and outreach pipeline
-* 👥 Contact management
-* 🤖 AI-assisted networking email drafting
-* ✅ Review and approval workflow
-* 📧 Email sending workflow and dry-run testing
-* 📂 CSV contact import
+### 🎬 Project Demo
 
-> The demo GIF is stored at `docs/demo.gif`. Make sure the filename and path match the actual file in your repository.
+Explore the recorded application walkthrough:
 
----
+**[▶️ Watch the IB Networking CRM Demo](docs/demo.mp4)**
 
-## 📑 Table of Contents
+The demo file is stored in the repository's `docs/` directory.
 
-* [Overview](#-overview)
-* [Problem Statement](#-problem-statement)
-* [Key Features](#-key-features)
-* [System Architecture](#️-system-architecture)
-* [Technology Stack](#️-technology-stack)
-* [Getting Started](#-getting-started)
-* [Environment Configuration](#️-environment-configuration)
-* [How to Use](#-how-to-use)
-* [Project Structure](#-project-structure)
-* [Security and Responsible Outreach](#-security-and-responsible-outreach)
-* [Current Limitations](#️-current-limitations)
-* [Roadmap](#️-roadmap)
-* [AI Engineering Concepts](#-ai-engineering-concepts)
-* [Interview Talking Points](#-interview-talking-points)
-* [Contributing](#-contributing)
-* [License](#-license)
-* [Connect](#-connect)
+### 🎯 Key Highlights
+
+* Contact management and organization
+* CSV contact import
+* AI-assisted networking email generation
+* Human-in-the-loop draft review and approval
+* Email workflow with dry-run testing
+* SQLite-based local persistence
+* Optional email discovery integration
+* Environment-based configuration for API credentials
 
 ---
 
-## 🎯 Overview
+## ✨ Features
 
-Professional networking is an important part of building a career in investment banking, finance, consulting, and other competitive industries.
+### 👥 1. Contact Management
 
-However, organizing contacts, writing personalized emails, and tracking outreach can become repetitive and difficult to manage using spreadsheets alone.
-
-IB Networking CRM brings these activities into a single application. Users can maintain contact records, import contacts from CSV, generate email drafts using an LLM, review messages, and manage outreach statuses.
-
-### Project objectives
-
-* Simplify contact management for students.
-* Reduce repetitive email-writing effort through AI assistance.
-* Keep email sending behind an explicit review and approval workflow.
-* Provide a lightweight CRM that works with a local SQLite database.
-* Demonstrate practical integration of LLMs with a Python application.
-
-### Who is this project for?
-
-* Students preparing for investment banking and finance careers.
-* Students building professional networking habits.
-* Developers exploring AI-assisted business applications.
-* Learners interested in CRM workflows, LLM integration, and email automation.
-
----
-
-## 🧩 Problem Statement
-
-### The problem
-
-Traditional networking workflows often involve multiple disconnected tools:
-
-* Spreadsheets for contact information.
-* Manual email drafting and personalization.
-* Separate tools for email discovery.
-* Manual tracking of drafted, approved, and sent messages.
-* Paid CRM and outreach platforms with features students may not need.
-
-### The solution
-
-IB Networking CRM combines contact organization, AI-assisted email drafting, and outreach tracking in one student-friendly application.
-
-Instead of immediately sending every AI-generated message, the workflow allows users to review and approve drafts before attempting delivery.
-
-The goal is not unrestricted mass emailing. It is **structured, personalized, and user-controlled networking**.
-
----
-
-## ✨ Key Features
-
-### 📇 1. Contact Management
-
-* Add professional contacts.
-* Organize contact information in a centralized interface.
-* Import contacts from CSV files.
-* Maintain contact records using SQLite.
+* Maintain professional contact records.
+* Organize contacts for networking outreach.
+* Import contacts from supported CSV files.
+* Store application data using SQLite.
 
 ### 🤖 2. AI-Assisted Email Drafting
 
 * Generate networking email drafts using the Groq API.
-* Use configurable student details to personalize prompts.
-* Help reduce repetitive writing.
-* Allow users to review generated content before use.
+* Use configured student information to personalize prompts.
+* Reduce repetitive email-writing effort.
+* Review and edit generated content before using it.
+
+> AI-generated messages can contain incorrect or irrelevant information. Always verify the content before sending.
 
 ### ✅ 3. Human-in-the-Loop Approval
 
-* Review AI-generated messages.
-* Edit drafts before sending.
-* Approve messages explicitly.
-* Keep drafting and sending as separate workflow steps.
+The workflow separates AI generation from email delivery.
 
-Human review is important because generated text may contain inaccurate details or irrelevant claims.
+1. Select a contact.
+2. Generate an email draft.
+3. Review and edit the draft.
+4. Approve the message.
+5. Send only after checking the recipient and configuration.
 
-### 🛡️ 4. Dry-Run Email Workflow
+### 📊 4. Outreach Workflow
 
-* Test the email workflow without intentionally delivering real emails.
-* Validate configuration and application behavior before live sending.
-* Reduce the risk of accidental messages during testing.
-
-### 📊 5. Outreach Pipeline
-
-Organize outreach through a workflow such as:
+The application is designed around a simple outreach lifecycle:
 
 `New → Drafted → Approved → Sent`
 
-The dashboard helps users monitor their progress and identify the next action for each contact.
+The workflow helps users organize their outreach activities and track message status.
 
-### 💾 6. SQLite Database
+### 📧 5. Email Integration
 
-* Local persistent storage.
-* No separate database server required for the MVP.
-* Simple setup for individual developers and students.
+* Gmail SMTP-based email delivery.
+* Configurable email credentials.
+* Dry-run testing before live delivery.
+* User review before sending.
+
+Live email functionality depends on the implementation, valid credentials, and provider permissions.
+
+### 📂 6. CSV Import
+
+Import contacts from supported CSV files instead of entering every record manually. Use the column format expected by the application.
 
 ### 🔎 7. Optional Email Discovery
 
-Hunter.io integration is available as an optional component according to the project design. Its use requires the appropriate API key and provider access.
+The project includes an email discovery service intended for optional Hunter.io integration. Usage requires the appropriate API credentials and provider access.
 
-### ⚙️ 8. Environment-Based Configuration
+### 🔐 8. Configuration and Security
 
-* Configure API credentials through environment variables.
-* Keep personal settings separate from application code.
-* Support local development with a `.env` file.
+* Environment-based application configuration.
+* `.env.example` for configuration templates.
+* `.env` excluded from version control.
+* Local SQLite database for the MVP.
 
-### 💸 9. Student-Friendly Technology Stack
-
-The project uses lightweight tools and services that may offer free usage options. API quotas, service terms, and account restrictions still apply.
+Never place real API keys, email passwords, or private contact data in a public repository.
 
 ---
 
@@ -176,196 +107,61 @@ The project uses lightweight tools and services that may offer free usage option
 
 ```mermaid
 flowchart TD
-    A[User] --> B[Streamlit Application]
-
+    A[User] --> B[Streamlit CRM Interface]
     B --> C[Contact Management]
     B --> D[CSV Import]
-    B --> E[AI Email Drafter]
-
+    B --> E[AI Email Drafting]
     C --> F[(SQLite Database)]
-    D --> F
-
-    E --> G[Groq API / LLM]
-    G --> H[Generated Email Draft]
-
+    D --> C
+    E --> G[Groq API]
+    G --> H[Email Draft]
     H --> I[Human Review and Approval]
-    I --> J{Dry Run Enabled?}
-
-    J -->|Yes| K[Dry-Run Workflow]
-    J -->|No| L[Gmail SMTP]
-
-    K --> M[Outreach Status Tracking]
-    L --> M
-    M --> F
+    I --> J[Email Sending Service]
+    J --> K[Gmail SMTP]
+    J --> F
 ```
 
-### Architecture walkthrough
+### Architecture Components
 
-1. **User interface:** Streamlit provides the CRM dashboard and workflow pages.
-2. **Contact management:** Users add contacts and import supported CSV files.
-3. **Data persistence:** SQLite stores application data.
-4. **AI drafting:** The email drafting service communicates with the configured Groq model.
-5. **Human review:** Users inspect and approve generated drafts.
-6. **Email delivery:** The sending service handles the configured Gmail SMTP workflow.
-7. **Status tracking:** The application tracks outreach progress.
+| Component             | Responsibility                  |
+| --------------------- | ------------------------------- |
+| Streamlit             | User interface and CRM workflow |
+| Python                | Application logic               |
+| SQLite                | Local data persistence          |
+| Groq API              | AI-assisted email drafting      |
+| Email service         | Email sending workflow          |
+| CSV                   | Contact import                  |
+| Environment variables | Application configuration       |
 
-This architecture represents the intended workflow. Exact implementation details depend on the current source code and configuration.
+The diagram represents the intended application workflow. Verify each integration against the current implementation before treating it as production-tested.
 
 ---
 
 ## 🛠️ Technology Stack
 
-| Component                          | Technology            | Purpose                              |
-| ---------------------------------- | --------------------- | ------------------------------------ |
-| Programming language               | Python 3.10           | Application logic                    |
-| Frontend and application framework | Streamlit             | Interactive CRM dashboard            |
-| Database                           | SQLite                | Local persistent storage             |
-| LLM provider                       | Groq API              | AI-assisted email generation         |
-| Email delivery                     | Gmail SMTP            | Sending approved emails              |
-| Data import                        | CSV                   | Bulk contact import                  |
-| Optional integration               | Hunter.io             | Email discovery                      |
-| Configuration                      | Environment variables | Credentials and application settings |
-| Environment management             | Conda                 | Isolated Python environment          |
+| Technology     | Purpose                            |
+| -------------- | ---------------------------------- |
+| Python 3.10+   | Core application development       |
+| Streamlit      | Interactive user interface         |
+| SQLite         | Local database                     |
+| Groq API       | LLM-powered email drafting         |
+| Gmail SMTP     | Email delivery                     |
+| CSV            | Contact data import                |
+| Conda          | Python environment management      |
+| Git and GitHub | Version control and source hosting |
 
 ---
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-Install the following before running the application:
-
-* Python 3.10
-* Conda, or another Python environment manager
-* Git
-* A Groq API key for AI-assisted drafting
-* Gmail SMTP credentials if you want to use live email delivery
-* A Hunter.io API key only if using the optional integration
-
-### Step 1: Clone the repository
-
-Replace the URL below with your actual GitHub repository URL.
-
-```bash
-git clone https://github.com/vaibhav07772/ib_crm_mvp.git
-cd ib_crm_mvp
-```
-
-### Step 2: Create the Conda environment
-
-```bash
-conda create -n ib_networking python=3.10 -y
-conda activate ib_networking
-```
-
-### Step 3: Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Step 4: Create the environment file
-
-On Windows Command Prompt:
-
-```bat
-copy .env.example .env
-```
-
-Open `.env` in your editor and configure the required values.
-
-If `.env.example` does not contain all the required settings, compare it with the application's configuration code before running the application.
-
-### Step 5: Run the application
-
-```bash
-streamlit run app.py
-```
-
-Open the local address printed in the terminal. Streamlit normally uses:
-
-`http://localhost:8501`
-
----
-
-## ⚙️ Environment Configuration
-
-Use the following as an example of the expected configuration. Replace placeholders with your own values.
-
-```env
-# Groq API
-GROQ_API_KEY=your_groq_api_key
-
-# Optional: Hunter.io
-HUNTER_API_KEY=your_hunter_api_key
-
-# Gmail SMTP
-SMTP_EMAIL=your_email@gmail.com
-SMTP_APP_PASSWORD=your_google_app_password
-
-# Student details for email personalization
-STUDENT_NAME=Your Name
-STUDENT_UNIVERSITY=Your University
-STUDENT_MAJOR=Finance
-STUDENT_GRADUATION_YEAR=2027
-STUDENT_LINKEDIN=https://www.linkedin.com/in/yourprofile
-STUDENT_EMAIL=your_email@gmail.com
-```
-
-### Configuration notes
-
-* The variable names must match those expected by your application's configuration code.
-* Use a Google App Password where supported and required; do not use your regular Gmail password.
-* Never commit your `.env` file to GitHub.
-* Do not share API keys or SMTP credentials in screenshots, demo recordings, or public issues.
-* Keep `.env.example` populated with placeholders rather than real credentials.
-
----
-
-## 📖 How to Use
-
-### Step 1 — Manage contacts
-
-Open the contact management interface. Add contacts individually or import a CSV file using the application's supported format.
-
-### Step 2 — Generate drafts
-
-Navigate to the email drafting workflow, select a contact, and use the AI drafting feature to generate a networking email.
-
-### Step 3 — Review and edit
-
-Read the generated message carefully. Verify names, professional details, and the reason for contacting the recipient. Edit anything that is inaccurate or too generic.
-
-### Step 4 — Approve the email
-
-Approve the message only after reviewing its content and recipient information.
-
-### Step 5 — Test using dry-run mode
-
-Keep dry-run mode enabled while testing. Confirm that the application follows the intended workflow without sending real emails.
-
-### Step 6 — Send approved emails
-
-When you are ready for live sending, disable dry-run mode according to the application's interface. Confirm your SMTP configuration and check the recipient and message before sending.
-
-### Step 7 — Track progress
-
-Use the dashboard and outreach statuses to organize your next actions.
-
-**Note:** Follow-up reminders are part of the future roadmap, not a feature to assume is currently implemented.
-
----
-
-## 📂 Project Structure
+## 📁 Project Structure
 
 ```text
 ib_crm_mvp/
+│
 ├── app.py
 ├── requirements.txt
-├── .env.example
-├── .gitignore
 ├── README.md
-├── HINGLISH_readme.md
+├── .gitignore
+├── .env.example
 │
 ├── config/
 │   └── settings.py
@@ -381,201 +177,272 @@ ib_crm_mvp/
 ├── pages/
 ├── utils/
 ├── docs/
-│   └── demo.gif
+│   └── demo.mp4
 │
 └── data/
 ```
 
-### Important modules
+**Note:** This tree summarizes the main project layout. Additional files may exist in the actual repository.
 
-| File or directory          | Responsibility                       |
-| -------------------------- | ------------------------------------ |
-| `app.py`                   | Main Streamlit application           |
-| `config/`                  | Application configuration            |
-| `database/`                | SQLite database operations           |
-| `services/llm_drafter.py`  | AI-assisted email drafting           |
-| `services/email_finder.py` | Optional email discovery integration |
-| `services/email_sender.py` | Email sending logic                  |
-| `pages/`                   | Streamlit application pages          |
-| `utils/`                   | Shared helper utilities              |
-| `data/`                    | Local application data               |
-| `docs/demo.gif`            | README demo preview                  |
-| `requirements.txt`         | Python dependencies                  |
-| `.env.example`             | Environment configuration template   |
-| `.gitignore`               | Files excluded from Git              |
+### Important Modules
 
-The tree above summarizes the supplied project layout. Add any additional files or nested directories that exist in your actual repository.
+| File or Directory          | Purpose                                |
+| -------------------------- | -------------------------------------- |
+| `app.py`                   | Main Streamlit application             |
+| `config/settings.py`       | Application settings and configuration |
+| `database/db.py`           | Database operations                    |
+| `services/llm_drafter.py`  | AI-assisted email drafting             |
+| `services/email_finder.py` | Optional email discovery               |
+| `services/email_sender.py` | Email sending workflow                 |
+| `pages/`                   | Additional Streamlit pages             |
+| `utils/`                   | Shared utility functions               |
+| `docs/demo.mp4`            | Recorded project demonstration         |
+| `requirements.txt`         | Python dependencies                    |
+| `.env.example`             | Example environment configuration      |
+| `.gitignore`               | Files excluded from Git                |
 
 ---
 
-## 🔐 Security and Responsible Outreach
+## ⚙️ Getting Started
 
-This project is built around a user-reviewed email workflow. However, manual approval alone cannot guarantee deliverability, prevent spam classification, or guarantee account safety.
+Follow these steps to run the project locally.
 
-Follow these practices:
+### Prerequisites
 
-* **Protect credentials:** Keep API keys and SMTP credentials out of source code and version control.
-* **Review messages:** Verify the recipient, content, and personalization before sending.
-* **Test first:** Use dry-run mode to validate the workflow.
-* **Respect recipients:** Contact people appropriately, respect opt-out requests, and avoid unsolicited bulk messaging.
-* **Protect contact data:** Store only information you are authorized to use and avoid publishing private contact records.
-* **Respect provider rules:** Follow Gmail policies, API limits, and applicable privacy requirements.
-* **Use conservative sending limits:** Any configured daily limit should be treated as a safeguard, not permission to bypass provider restrictions.
-* **Handle errors safely:** Avoid exposing credentials or private contact details in application logs.
+* Python 3.10 or a compatible version
+* Conda or another Python environment manager
+* Git
+* Groq API key for AI-assisted drafting
+* Gmail SMTP credentials if you intend to test live email delivery
+* Hunter.io API key if you use the optional email discovery integration
 
-Before deploying this application for multiple users, add appropriate authentication, authorization, and access controls.
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/vaibhav07772/ib_crm_mvp.git
+cd ib_crm_mvp
+```
+
+### 2. Create a Conda Environment
+
+```bash
+conda create -n ib_networking python=3.10 -y
+conda activate ib_networking
+```
+
+### 3. Install Dependencies
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### 4. Configure Environment Variables
+
+On Windows Command Prompt:
+
+```bat
+copy .env.example .env
+```
+
+Open `.env` in your editor and configure the values required by the application.
+
+Example configuration:
+
+```dotenv
+GROQ_API_KEY=your_groq_api_key
+
+HUNTER_API_KEY=your_hunter_api_key
+
+SMTP_EMAIL=your_email@gmail.com
+SMTP_APP_PASSWORD=your_google_app_password
+
+STUDENT_NAME=Your Name
+STUDENT_UNIVERSITY=Your University
+STUDENT_MAJOR=Finance
+STUDENT_GRADUATION_YEAR=2027
+STUDENT_LINKEDIN=https://www.linkedin.com/in/yourprofile
+STUDENT_EMAIL=your_email@gmail.com
+```
+
+Replace all example values with your own configuration. Leave optional credentials unused if their integrations are not needed.
+
+**Important:** These variable names are examples based on the documented configuration. Confirm that they match the names read by `config/settings.py` and the relevant service modules. Do not commit your real `.env` file.
+
+For Gmail, use an appropriate Google App Password where required, rather than your regular account password.
+
+### 5. Run the Application
+
+```bash
+streamlit run app.py
+```
+
+Open the local URL printed in the terminal. Streamlit commonly uses:
+
+```text
+http://localhost:8501
+```
+
+---
+
+## 📖 How to Use
+
+The intended workflow is:
+
+1. **Manage contacts:** Add contacts or import a supported CSV file.
+2. **Select a contact:** Choose the person for your networking outreach.
+3. **Generate a draft:** Use the AI email drafting functionality.
+4. **Review the message:** Verify names, facts, tone, and personalization.
+5. **Approve the draft:** Confirm the content and recipient before proceeding.
+6. **Test safely:** Use dry-run mode while validating the email workflow.
+7. **Send when ready:** Use live delivery only after confirming SMTP configuration and the sending behavior.
+8. **Track outreach:** Use the available status tracking to organize your activities.
+
+The exact controls and available actions depend on the current application implementation.
+
+---
+
+## 🛡️ Security and Responsible Outreach
+
+Security is important when an application handles API credentials, contact information, and email delivery.
+
+Recommended practices:
+
+* Keep `.env` out of version control.
+* Use `.env.example` with placeholders only.
+* Never expose API keys or SMTP passwords in screenshots or logs.
+* Verify recipients and message content before sending.
+* Test the sending workflow in dry-run mode.
+* Respect recipients' privacy and opt-out requests.
+* Follow email provider rules and applicable privacy requirements.
+* Avoid unsolicited bulk outreach.
+* Restrict access to local databases containing private contact information.
+
+Human approval is a useful safeguard, but it does not guarantee email deliverability or account safety.
 
 ---
 
 ## ⚠️ Current Limitations
 
-IB Networking CRM is a student-focused MVP, not a fully production-hardened CRM.
+This project is an MVP intended for learning and individual use, not a fully production-hardened CRM.
 
-* SQLite is appropriate for local use but may not suit a multi-user distributed deployment.
-* AI email drafting depends on external API availability and quota limits.
-* Live email delivery depends on valid SMTP credentials and provider permissions.
-* Optional email discovery requires a supported API key and service access.
-* Follow-up reminders and advanced outreach analytics remain planned enhancements.
-* Authentication and role-based access control should be considered before multi-user deployment.
-* Email deliverability and account safety cannot be guaranteed by the application.
+* SQLite is suitable for a lightweight local application but may not be ideal for concurrent multi-user deployment.
+* AI drafting depends on external API availability and quotas.
+* Live email delivery requires valid SMTP configuration and provider permissions.
+* Email discovery depends on optional third-party service access.
+* Advanced analytics and follow-up reminders may require further development.
+* Authentication and role-based access controls should be considered before multi-user deployment.
+* Automated tests and production monitoring should be expanded before relying on the application in a business environment.
 
 ---
 
-## 🗺️ Roadmap
+## 🗺️ Future Improvements
 
-### Phase 1 — Student MVP
+Potential next steps include:
 
-* [x] Streamlit-based CRM interface
-* [x] Contact management workflow
-* [x] CSV contact import
-* [x] AI-assisted email drafting
-* [x] Human review and approval
-* [x] SQLite database integration
-* [x] Gmail SMTP integration
-* [x] Dry-run workflow
-* [x] Outreach status tracking
-
-*These checkboxes describe the intended MVP feature set; verify each feature against the implementation before treating it as tested.*
-
-### Phase 2 — Workflow Improvements
-
-* [ ] Follow-up reminders with approval gates
-* [ ] Improved email templates
-* [ ] Contact deduplication and validation
-* [ ] Better error handling and retry behavior
-* [ ] Outreach activity history
-* [ ] Automated tests for key workflows
-* [ ] Improved reporting
-
-### Phase 3 — Scalable Architecture
-
-* [ ] FastAPI backend
-* [ ] PostgreSQL for shared data storage
-* [ ] React-based frontend
+* [ ] Automated tests for core workflows
+* [ ] Contact validation and duplicate detection
+* [ ] Follow-up reminders and activity history
+* [ ] Improved error handling and retry logic
+* [ ] Better reporting and outreach analytics
+* [ ] FastAPI backend for separating application logic
+* [ ] PostgreSQL for shared multi-user storage
 * [ ] Authentication and role-based access control
-* [ ] Monitoring and structured logging
-* [ ] Optional external data integrations
-* [ ] Reliable outreach analytics where supporting data is available
-* [ ] Production deployment safeguards
+* [ ] Structured logging and monitoring
+* [ ] Deployment configuration and operational safeguards
+
+These are proposed improvements, not claims that the features are already implemented.
 
 ---
 
-## 🧠 AI Engineering Concepts Demonstrated
+## 🧠 AI Engineering Concepts
 
-### 1. LLM API Integration
+This project provides practical exposure to several AI application development concepts.
 
-Connects a language model provider to a Python application to generate contextual email drafts.
+### LLM API Integration
 
-### 2. Prompt Engineering
+Connecting an external language model service to a Python application.
 
-Uses configurable student information to guide email generation. Prompt quality and input validation help improve relevance and reduce unsupported claims.
+### Prompt Engineering
 
-### 3. Human-in-the-Loop AI
+Structuring model inputs to generate relevant email drafts from user-provided context.
 
-Introduces a human review step between model-generated text and an external action. This is a useful pattern for AI systems that interact with real people or external services.
+### Human-in-the-Loop AI
 
-### 4. Workflow Automation
+Placing a human review step before AI-generated content triggers an external action.
 
-Connects multiple steps—contact selection, drafting, approval, and sending—into a structured process.
+### Workflow Automation
 
-### 5. Data Persistence
+Connecting contact management, drafting, approval, and email delivery into a structured process.
 
-Uses SQLite to maintain application data between sessions.
+### Data Persistence
 
-### 6. External Service Integration
+Using SQLite to store application data locally.
 
-Integrates an LLM provider and an email service, with an optional email discovery integration.
+### External Service Integration
 
-### 7. Configuration and Secrets Management
+Working with an LLM API and an email service, with optional email discovery.
 
-Separates environment-specific settings and credentials from the application code.
+### Configuration and Secrets Management
+
+Separating credentials and environment-specific settings from application code.
 
 ---
 
 ## 🎤 Interview Talking Points
 
-Use these points when presenting the project in an AI Engineer, Python Developer, or AI Application Developer interview.
+**1. What problem does this project solve?**
 
-**Q1. Why did you build this project?**
+It brings contact management, AI-assisted networking email drafting, and outreach tracking into a single application for students.
 
-I built IB Networking CRM to simplify professional networking for students by combining contact management, AI-assisted email drafting, and outreach tracking in one application.
+**2. Why use an LLM for email drafting?**
 
-**Q2. Why use an LLM for email drafting?**
+An LLM can create contextual draft messages from supplied information, reducing repetitive writing while allowing the user to review and edit the output.
 
-An LLM can generate context-aware drafts from supplied information, reducing repetitive writing while allowing users to review and personalize the final message.
+**3. Why use SQLite?**
 
-**Q3. Why use SQLite instead of PostgreSQL?**
+SQLite is lightweight and does not require a separate database server, making it appropriate for a local MVP. PostgreSQL could be considered for a larger multi-user deployment.
 
-SQLite is lightweight and requires no separate database server, making it suitable for a local MVP. PostgreSQL would be a better option for a larger multi-user deployment.
+**4. Why include human approval?**
 
-**Q4. Why include human approval?**
+AI-generated content can be inaccurate. Human review helps verify the message and recipient before an external action such as sending an email.
 
-AI-generated text can contain inaccurate or irrelevant details. Human review helps verify the message before it triggers an external action such as sending an email.
+**5. Why use dry-run testing?**
 
-**Q5. Why include dry-run mode?**
+Dry-run testing helps validate the sending workflow without intentionally delivering real emails, provided the implementation correctly enforces dry-run behavior.
 
-Dry-run mode allows the sending workflow to be tested without intentionally delivering real emails. It is useful for validating configuration and application behavior.
+**6. How could the system be scaled?**
 
-**Q6. How would you scale the project?**
+A future version could separate the frontend from a FastAPI backend, use PostgreSQL for shared storage, introduce authentication and authorization, and add automated tests and monitoring.
 
-I would separate the interface from a FastAPI backend, migrate shared storage to PostgreSQL, introduce authentication and authorization, and add tests, monitoring, and operational safeguards.
+**7. What would you improve next?**
 
-**Q7. What would you improve next?**
-
-I would prioritize automated tests, contact deduplication, follow-up reminders, better error handling, secure multi-user access, and more comprehensive outreach reporting.
+I would prioritize testing, contact deduplication, reliable error handling, follow-up reminders, secure multi-user access, and better outreach reporting.
 
 ---
 
 ## 🤝 Contributing
 
-Contributions and suggestions are welcome.
+Suggestions and contributions are welcome.
 
 1. Fork the repository.
 2. Create a feature branch.
-3. Implement your changes.
-4. Test the affected workflows.
+3. Make your changes.
+4. Test the affected functionality.
 5. Commit your changes with a descriptive message.
-6. Open a pull request explaining the change.
+6. Open a pull request describing the changes.
 
-Please never include real credentials or private contact data in a pull request.
-
----
-
-## 📄 License
-
-This project is intended to use the MIT License, as indicated by the repository badge.
-
-Ensure that a `LICENSE` file containing the MIT License is present in the repository before distributing the project under that license.
+Do not include real credentials or private contact data in contributions.
 
 ---
 
-## 👨‍💻 Connect
+## 👨‍💻 Author
 
 **Vaibhav Singh**
-*Student Developer | AI Engineering, Automation & Finance Technology*
 
-* GitHub: [@vaibhav07772](https://github.com/vaibhav07772)
-* LinkedIn: [Visit LinkedIn](https://www.linkedin.com/)
+Student Developer | AI Engineering, Automation & Finance Technology
+
+* **GitHub:** [@vaibhav07772](https://github.com/vaibhav07772)
+* **Project Repository:** [ib_crm_mvp](https://github.com/vaibhav07772/ib_crm_mvp)
 
 ---
 
